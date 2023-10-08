@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="shortcut icon" href="avatar.png" type="image/x-icon" />
+    <style>
+        body {
+            margin: 3% 8%;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .hidden-row {
+            display: none;
+            background-color: #f9f9f9;
+        }
+
+        .image-preview {
+            display: flex;
+            gap: 10px;
+            justify-content: space-evenly;
+        }
+
+        .image-preview img {
+            border-radius: 15px;
+        }
+
+        .image-preview img:hover {
+            transition: all ease-in-out;
+            transform: scale(1.1);
+        }
+
+        .copyright {
+            text-align: right;
+            margin-top: 5%;
+        }
+
+        .copyright a {
+        text-decoration: none;
+        }
+
+        .backgroud {
+            text-align: right;
+        }
+
+    </style>
+
+    <title>M. Royhan Adriansyah - Objek Wisata Indonesia</title>
+</head>
+<body>
+    <h4>Desain by :</h4>
+    <div style="display: flex;">
+        <img src="avatar.png" width="90px">
+        <h4 style="border: #fc0202; width: auto;">
+            &nbsp;&nbsp;&nbsp;M. Royhan Adriansyah &nbsp;(211011401457)<br>
+            &nbsp;&nbsp;&nbsp;Teknik Informatika <br>
+            &nbsp;&nbsp;&nbsp; 05TPLE008
+        </h4>
+    </div>
+
+    <div style="display:flex; justify-content:end;">
+        <img src="backgroud.png" width="120px">
+    </div>
+    
+    <h1 style="font-size:xx-large; font-family: Arial, Helvetica, sans-serif;">Objek Wisata Indonesia</h1>
+
+    <table>
+        <tr style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+            <th>Nama Objek Wisata</th>
+            <th>Lokasi</th>
+            <th>Deskripsi</th>
+            <th colspan="2">Detail</th>
+        </tr>
+
+        <tr class="show-details">
+            <td>Bali</td>
+            <td>Pulau Bali</td>
+            <td>Pulau Bali terkenal dengan pantai-pantai indahnya dan budaya yang kaya.</td>
+            <td><button onclick="showDetails('baliDetails')">SHOW</button></td>
+        </tr>
+
+        <tr class="hidden-row" id="baliDetails">
+            <td colspan="6">
+                <strong>Detail Bali:</strong><br>
+                <p>Bali, sebuah pulau indah di Indonesia, telah lama menjadi salah satu destinasi pariwisata paling terkenal di dunia. Dikenal dengan julukan "Pulau Dewata," Bali menyuguhkan pesona alam yang memukau dan kekayaan budaya yang tak tertandingi. Terletak di antara Pulau Jawa dan Pulau Lombok, Bali menawarkan pantai-pantai berpasir putih yang menakjubkan, seperti Kuta, Seminyak, dan Uluwatu, yang menjadi surga bagi para penggemar selancar. </p> 
+                <p class="image-preview">
+                    <img src="pantai.jpg" alt="pantai bali" width="250" />
+                    <img src="tengah.jpg" alt="temple bali" width="250" />
+                    <img src="kanan.jpg" alt="temple bali 2" width="250" />
+                    <img src="pegunungan.jpg" alt="mount agung bali" width="250" />
+                </p>
+            
+                <p>Selain keindahan pantainya, Bali juga dikenal karena warisan budayanya yang kaya. Pulau ini dipenuhi dengan kuil-kuil Hindu yang indah, seperti Pura Besakih, yang dianggap sebagai tempat pemujaan tertinggi di Bali. Budaya Bali juga tercermin dalam tarian dan upacara tradisionalnya, seperti tari Legong dan tari Barong. Wisatawan dapat mengalami budaya ini melalui pertunjukan tari dan perayaan upacara adat yang sering diadakan di berbagai tempat di pulau ini.</p>
+
+                <p>Selain itu, Bali juga menawarkan berbagai aktivitas wisata yang beragam, termasuk menyelam di terumbu karang yang spektakuler, hiking ke gunung-gunung yang indah, seperti Gunung Batur, dan mengeksplorasi pedesaan yang hijau dan indah. Terlepas dari semua daya tariknya, yang membuat Bali benar-benar istimewa adalah keramahannya yang luar biasa, dengan penduduk setempat yang ramah dan senyum yang tulus, menjadikan pulau ini tempat yang tak terlupakan bagi semua pengunjungnya. Bali benar-benar merupakan surga yang mendalam, menawarkan pengalaman yang tak terlupakan bagi siapa saja yang datang menjelajahinya.</p>
+
+                <button onclick="hideDetails('baliDetails')">Tutup</button>
+            </td>
+        </tr>
+        <tr class="show-details">
+            <td>Raja Ampat</td>
+            <td>Pulau Papua</td>
+            <td>Kepulauan Raja Ampat berada di bagian paling barat Papua yang begitu eksotis</td>
+                <td><button onclick="showDetails('PapuaDetails')">SHOW</button></td>
+        </tr>
+        
+        <tr class="hidden-row" id="PapuaDetails">
+            <td colspan="6">
+                <strong>Detail Papua (Raja Ampat) :</strong><br>
+                <p> Raja Ampat adalah salah satu kabupaten di provinsi Papua Barat Daya, Indonesia. Ibukota kabupaten ini terletak di Waisai. Kabupaten ini memiliki 610 pulau, termasuk kepulauan Raja Ampat. Empat di antaranya, yakni Pulau Misool, Salawati, Batanta dan Waigeo, merupakan pulau-pulau besar. Dari seluruh pulau hanya 35 pulau yang berpenghuni sedangkan pulau lainnya tidak berpenghuni dan sebagian besar belum memiliki nama. Kabupaten ini memiliki total luas 67.379,60 km² dengan rincian luas daratan 7.559,60 km² dan luas lautan 59.820,00 km².</p> 
+                <p class="image-preview">
+                    <img src="awal.webp" alt="pantai bali" width="250" />
+                    <img src="kedua.jpg" alt="temple bali" width="250" />
+                    <img src="ketiga.jpg" alt="temple bali 2" width="250" />
+                    <img src="keempat.jpg" alt="mount agung bali" width="250" />
+                </p>
+            
+                <p>wilayah perairan Raja Ampat adalah salah satu destinasi diving terbaik di dunia. Menurut laporan sebuah organisasi sosial lingkungan internasional, The Nature Conservancy and Conservation International, sekitar 75% spesies karang di dunia hidup di kepulauan Raja Ampat. Destinasi ini memiliki kekayaan dan keunikan spesies yang tinggi dengan ditemukannya 1.318 jenis ikan, 699 jenis moluska (hewan lunak), dan 537 jenis terumbu karang. Rasakan sendiri sensasi menyelam dan bertemu dengan ragam jenis biota laut yang unik, seperti kuda laut kerdil (pygmy seahorse), ikan kelelawar, hingga dugong bisa kamu temukan di wilayah perairan Raja Ampat.</p>
+
+                <p>Tak hanya keindahan bawah lautnya yang luar biasa, pemandangan di atas permukaan juga tak kalah memesona. Panorama deretan pulau-pulau batu di tengah gradasi air biru terlihat begitu surgawi saat dilihat dari atas bukit. </p>
+
+                <button onclick="hideDetails('PapuaDetails')">Tutup</button>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <p style="color: aqua;" text-decorationn="none">
+        <img src="instagram.png" width="20px"><a href="https://instagram.com/mroyhan_adr?igshid=NzZlODBkYWE4Ng==">: mroyhan_adr</a>
+    </p>
+    
+    <p class="copyright">Copy &copy; 2023 M. Royhan Adriansyah. All rights reserved <br>
+        
+    </p>
+
+    <script>
+        function showDetails(id) {
+        document.getElementById(id).style.display = 'table-row';
+    }
+
+    function hideDetails(id) {
+        document.getElementById(id).style.display = 'none';
+    }
+    </script>
+</body>
+</html>
