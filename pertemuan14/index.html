@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luas Trapesium Calculator</title>
+    <style>
+      .copy {
+        padding-top: 200px;
+        font-size: small;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(116, 114, 112);
+      }
+      .form {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form">
+      <h2 style="text-align: center"><u>Menghitung Luas Trapesium</u></h2>
+      <p><u>Diketahui</u></p>
+      <form id="trapezoidForm" style="padding-left: 50px">
+        <label for="garisAtas">Garis Atas: &emsp;</label>
+        <input type="number" id="garisAtas" required /> cm
+        <br />
+        <br />
+        <label for="garisBawah">Garis Bawah: &emsp14;</label>
+        <input type="number" id="garisBawah" required /> cm
+        <br />
+        <br />
+        <label for="tinggi">Tinggi: &emsp; &emsp; &emsp14; </label>
+        <input type="number" id="tinggi" required /> cm
+        <br />
+        <br />
+        <button type="button" onclick="hitungLuas()">Hitung Luas</button>
+      </form>
+      <p><u>Maka :</u></p>
+      <div id="hasilLuas" style="padding-left: 50px">Luas Trapesium :</div>
+    </div>
+    <script>
+      function hitungLuas() {
+        var garisAtas = parseFloat(document.getElementById("garisAtas").value);
+        var garisBawah = parseFloat(document.getElementById("garisBawah").value);
+        var tinggi = parseFloat(document.getElementById("tinggi").value);
+        var luasTrapesium = ((garisAtas + garisBawah) * tinggi) / 2;
+        document.getElementById("hasilLuas").innerHTML = "Luas Trapesium : " + luasTrapesium;
+      }
+    </script>
+    <p class="copy"><b>Copyright &copy; 2023 M. Royhan Adriansyah</b></p>
+  </body>
+</html>
