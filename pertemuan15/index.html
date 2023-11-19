@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form M.Royhan</title>
+    <script>
+      function showAlert() {
+        alert("BOM akan meledak Harap Berlindung");
+      }
+
+      function showPrompt() {
+        var name = prompt("Masukkan nama Anda:", "Royhan");
+        if (name != null && name !== "") {
+          alert("Halo, " + name + "!");
+        } else {
+          alert("Anda tidak memasukkan nama.");
+        }
+      }
+
+      function showConfirm() {
+        var result = confirm("Apakah Anda yakin ingin melanjutkan?");
+        if (result) {
+          alert("Anda memilih OK!");
+        } else {
+          alert("Anda memilih Cancel!");
+        }
+      }
+
+      function submitForm() {
+        var formName = document.forms["exampleForm"]["name"].value;
+        var formALAMAT = document.forms["exampleForm"]["alamat"].value;
+        var formJENIS = document.forms["exampleForm"]["jenis"].value;
+
+        if (formName === "" || formALAMAT === "" || formJENIS === "") {
+          alert("Nama, Alamat, dan Jenis kelamin harus diisi!");
+        } else {
+          alert("Formulir dikirim!\nNama: " + formName + "\nAlamat: " + formALAMAT);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form name="exampleForm" style="font-family: 'Times New Roman', Times, serif">
+      <h1>From Pendaftaran</h1>
+      <hr color="blue" />
+      <br />
+      <label for="name">Nama &emsp;&emsp;&emsp;&emsp;&emsp14;:</label> <input class="nama" type="text" size="15" id="name" name="nama" /> <br /><br />
+      <label for="alamat">Alamat &emsp;&emsp;&emsp13;&emsp;&emsp13;:</label> <input type="text" id="alamat" size="15" name="alamat" /> <br /><br />
+      <label for="jenis">Jenis Kelamin &emsp;:</label> <input type="radio" value="pria" id="jenis" name="jenis" /> Pria <br />
+      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp13;<input type="radio" value="perempuan" name="jenis" /> perempuan <br /><br />
+      <button type="button" onclick="submitForm()">Kirim Formulir</button>
+      <input type="reset" value="Ulang" />
+    </form>
+    <br />
+    <h5 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: rgb(123, 126, 126)">Copyright &copy; 2023 M.Royhan Adriansyah</h5>
+    <hr color="blue" />
+    <br />
+    <button onclick="showAlert()">Tampilkan Alert</button>
+    <button onclick="showPrompt()">Tampilkan Prompt</button>
+    <button onclick="showConfirm()">Tampilkan Confirm</button>
+  </body>
+</html>
